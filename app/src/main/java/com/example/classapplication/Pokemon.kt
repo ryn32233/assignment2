@@ -5,7 +5,8 @@ data class Pokemon (
     val type: String,
     val dexNo: Int,
     val region: String,
-    val image: Int,
+    val image: String,
+    val description: String,
     val id: Int,
     val relation: List<Int>
 

@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">ClassApplication</string>
     <string name="pokemontcg_crownzenith">As is typically the case, a new expansion will always shake up the format, regardless of how many cards in the expansion are expected to be impactful by those on social media. In the case of Crown Zenith, there is, objectively, not very many impactful cards, as the set is primarily a “reprint set” with the luxurious Galarian Gallery subset. However, to say that there are zero impactful cards in the expansion would also be a lie. In particular, players are heavily focused on Radiant Eternatus, Sky Seal Stone, and Zamazenta. They will also be the focus on this article.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
