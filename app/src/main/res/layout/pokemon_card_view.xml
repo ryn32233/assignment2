@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.cardview.widget.CardView android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
     android:elevation="8dp"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -16,17 +18,23 @@
             android:id="@+id/pokemon_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintWidth_max="120dp"
+            app:layout_constraintHeight_max="120dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="4dp"
             tools:src="@drawable/baseline_catching_pokemon_24"/>
 
         <TextView
             android:id="@+id/pokemon_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="32sp"
+            android:layout_marginStart="8dp"
+            android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@id/pokemon_image"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/pokemon_type"
             tools:text="Bulbasaur"
             />
 
@@ -35,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Grass/Poison"
-            android:textSize="32sp"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="@id/pokemon_name"
             app:layout_constraintTop_toBottomOf="@id/pokemon_name"
             />
@@ -44,7 +52,7 @@
             android:id="@+id/pokemon_dexNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Entry #001"
+            tools:text="#001"
             android:textSize="32sp"
             app:layout_constraintStart_toStartOf="@id/pokemon_type"
             app:layout_constraintTop_toBottomOf="@id/pokemon_type"

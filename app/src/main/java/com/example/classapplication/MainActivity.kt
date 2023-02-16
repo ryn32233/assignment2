@@ -3,8 +3,6 @@ package com.example.classapplication
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.classapplication.ui.PokemonDetailFragment
 import com.example.classapplication.ui.PokemonListFragment
 

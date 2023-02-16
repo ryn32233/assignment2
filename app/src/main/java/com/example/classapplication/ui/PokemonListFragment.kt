@@ -10,16 +10,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.classapplication.Pokemon
 import com.example.classapplication.PokemonAdapter
 import com.example.classapplication.R
+import kotlin.random.Random
 
 
 class PokemonListFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
@@ -30,9 +28,20 @@ class PokemonListFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         val pokemon = mutableListOf<Pokemon>()
+        val type = mutableListOf("Grass", "Fire", "Water", "Electric")
+        val name = mutableListOf("Bulbasaur", "Charmander", "Squirtle", "Pikachu")
+        val region = mutableListOf("Kanto", "Johto")
+        val id = mutableListOf(1, 2, 3, 4)
 
         for(i in 0 .. 30) {
-            pokemon.add(createPokemon())
+            pokemon.add(
+                createPokemon(
+                    "${name.random()}".trimStart(),
+                    region.random(),
+                    type.random(),
+                    i
+                )
+            )
         }
 
         val adapter = PokemonAdapter(pokemon)
@@ -40,14 +49,21 @@ class PokemonListFragment : Fragment() {
 
         return view
     }
-    private fun createPokemon() = Pokemon(
-        name = "Bulbasaur",
-        type = "Grass/Poison",
-        image = R.drawable.baseline_catching_pokemon_24,
-        dexNo = 1,
-        region = "Kanto",
-        id = 0,
+    private fun createPokemon(
+        name: String,
+        region: String,
+        type: String,
+        dexNo: Int,
+        description: String,
+        id: Int
+    ) = Pokemon(
+        name = name,
+        region = region,
+        type = type,
+        dexNo = dexNo,
+        description = description,
+        image = "https://i.ebayimg.com/images/g/yhgAAOSws95fBYkU/s-l500.jpg",
+        id = id,
         relation = listOf()
-
     )
 }
